@@ -11,7 +11,8 @@ function App() {
   const listaReproduccion = (sede) => {
     const list = []
     Object.keys(sede).forEach(key => list.push(sede[key]))
-    return list;
+    const sorted = list.sort(function(a,b) {return (Math.random()-0.5)});
+    return sorted;
   };
 
   const Buttons = () =>{
