@@ -4,6 +4,9 @@ export const ALAMEDA = {
     tortas:'https://youtu.be/rIoJXtbl9Es',
     malteadas:'https://youtu.be/04UmtEeDbVw',
     desayunos:'https://youtu.be/B55KkrWWGs0',
+    destacado1: 'https://youtu.be/PhpmSb58zIc',
+    destacado2: 'https://youtu.be/y8_QrqpeyzA',
+    postre:'https://youtu.be/Ke4FGICgvgA'
 
 };
 

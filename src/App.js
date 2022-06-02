@@ -16,14 +16,14 @@ function App() {
 
   const Buttons = () =>{
     return (
+      
       <div class="btn-group" role="group" aria-label="Basic example">
         
-        < Link to='/alameda'><button type="button" className="btn btn-secondary">Alameda</button></Link>
-        < Link to='/san-antonio'><button type="button" className="btn btn-secondary">San Antonio</button></Link>
+        < Link to='/alameda'><button type="button" className="btn btn-secondary mt-5">Alameda</button></Link>
+        < Link to='/san-antonio'><button type="button" className="btn btn-secondary mt-5">San Antonio</button></Link>
 
       </div>
      
-
     );
   }
 
