@@ -7,6 +7,7 @@ export const ALAMEDA = {
     destacado1: 'https://youtu.be/PhpmSb58zIc',
     destacado2: 'https://youtu.be/1HJNM8RCQSM',
     postre:'https://youtu.be/Ke4FGICgvgA',
+    cocteles:'https://youtu.be/R-KPSDuQ6SE',
 
 };
 
