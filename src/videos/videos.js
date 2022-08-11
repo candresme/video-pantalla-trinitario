@@ -74,7 +74,7 @@ export const MORNING_SAN_ANTONIO ={
 
 export const TARDE_SAN_ANTONIO ={
     malteadas:'https://youtu.be/0Qr9esjf1Gw',
-    postres:'https://youtu.be/Osu8c3wdFNI',
+    postres:'https://youtu.be/fFNotkvMB5Q',
     sedes: 'https://youtu.be/HE4T2fGujYo',
     te_chai: 'https://youtu.be/eEQbnoevhF0'
 }
