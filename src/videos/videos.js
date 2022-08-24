@@ -3,10 +3,10 @@ export const ALAMEDA = {
 
     tortas:'https://youtu.be/rIoJXtbl9Es',
     malteadas:'https://youtu.be/04UmtEeDbVw',
-    desayunos:'https://youtu.be/lrN1ndHxWYs',
+    desayunos:'https://youtu.be/VdlVi6IASOg',
     destacado1: 'https://youtu.be/PhpmSb58zIc',
     destacado2: 'https://youtu.be/1HJNM8RCQSM',
-    postre:'https://youtu.be/VZBWmuCdjkE',
+    postre:'https://youtu.be/pNSWtvuawQI',
     cocteles:'https://youtu.be/R-KPSDuQ6SE',
     sedes: 'https://youtu.be/HE4T2fGujYo',
     te_chai: 'https://youtu.be/eEQbnoevhF0'
@@ -14,7 +14,7 @@ export const ALAMEDA = {
 };
 
 export const FDS_MORNING_ALAMEDA={
-    desayunos:'https://youtu.be/lrN1ndHxWYs',
+    desayunos:'https://youtu.be/VdlVi6IASOg',
     destacado1: 'https://youtu.be/PhpmSb58zIc',
     destacado2: 'https://youtu.be/1HJNM8RCQSM',
     sedes: 'https://youtu.be/HE4T2fGujYo',
@@ -25,7 +25,7 @@ export const FDS_MORNING_ALAMEDA={
 export const FDS_TARDE_ALAMEDA={
     cocteles:'https://youtu.be/R-KPSDuQ6SE',
     tortas:'https://youtu.be/rIoJXtbl9Es',
-    postre:'https://youtu.be/VZBWmuCdjkE',
+    postre:'https://youtu.be/pNSWtvuawQI',
     destacado1: 'https://youtu.be/PhpmSb58zIc',
     malteadas:'https://youtu.be/04UmtEeDbVw',
     sedes: 'https://youtu.be/HE4T2fGujYo',
@@ -34,7 +34,7 @@ export const FDS_TARDE_ALAMEDA={
 };
 
 export const MORNING_ALAMEDA={
-    desayunos:'https://youtu.be/lrN1ndHxWYs',
+    desayunos:'https://youtu.be/VdlVi6IASOg',
     destacado2: 'https://youtu.be/1HJNM8RCQSM',
     tortas:'https://youtu.be/rIoJXtbl9Es',
     sedes: 'https://youtu.be/HE4T2fGujYo',
@@ -43,7 +43,7 @@ export const MORNING_ALAMEDA={
 
 export const TARDE_ALAMEDA={
     tortas:'https://youtu.be/rIoJXtbl9Es',
-    postre:'https://youtu.be/VZBWmuCdjkE',
+    postre:'https://youtu.be/pNSWtvuawQI',
     cocteles:'https://youtu.be/R-KPSDuQ6SE',
     destacado1: 'https://youtu.be/PhpmSb58zIc',
     malteadas:'https://youtu.be/04UmtEeDbVw',
