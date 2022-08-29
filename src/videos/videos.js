@@ -44,7 +44,7 @@ export const FDS_TARDE_ALAMEDA={
 };
 
 export const MORNING_ALAMEDA={
-    desayunos,
+    a_desayunos,
     a_destacado2,
     a_tortas,
     sedes,
