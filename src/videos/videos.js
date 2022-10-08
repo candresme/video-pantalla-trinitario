@@ -6,7 +6,7 @@
     const a_desayunos='https://youtu.be/a2cHWbZsvWY';
     const a_destacado1='https://youtu.be/PhpmSb58zIc';
     const a_destacado2='https://youtu.be/1HJNM8RCQSM';
-    const a_postre='https://youtu.be/pNSWtvuawQI';
+    const a_postre='https://youtu.be/-8mxrMG6nwE';
     const a_cocteles='https://youtu.be/R-KPSDuQ6SE';
 
     /* :::::::::::::: SAN ANTONIO :::::::::::: */
@@ -19,7 +19,7 @@
 
     /* ::::::::::::::: GENERALES ::::::::: */
     const sedes='https://youtu.be/HE4T2fGujYo';
-    const te_chai='https://youtu.be/eEQbnoevhF0';
+    const te_chai='https://youtu.be/RYl19JjWOxI';
 
 
 
