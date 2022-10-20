@@ -3,7 +3,7 @@ import ReactPlayer from 'react-player';
 import ListaReproduccion from '../functions/ListaReproduccion'
 
 //IMPORTACION LISTAS DE REPRODUCCION
-import { ALAMEDA, MORNING_ALAMEDA, TARDE_ALAMEDA, FDS_MORNING_ALAMEDA, FDS_TARDE_ALAMEDA } from '../videos/videos';
+import { MORNING_ALAMEDA, TARDE_ALAMEDA, FDS_MORNING_ALAMEDA, FDS_TARDE_ALAMEDA } from '../videos/videos';
 
 const Alameda = () => {
   const [horario, setHorario] = useState();

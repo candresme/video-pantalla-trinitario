@@ -17,7 +17,7 @@
     const cafe_licor='https://youtu.be/T5NYEPxDXC4';
     const postres='https://youtu.be/fFNotkvMB5Q';    
 
-    /* ::::::::::::::: GENERALES ::::::::: */
+    /* ::::::::::::::: GENERALES :::::::::    */
     const sedes='https://youtu.be/HE4T2fGujYo';
     const te_chai='https://youtu.be/Zf1upe5YA8M';
     const camisetas='https://youtu.be/KySMdD8ORfA';
@@ -32,7 +32,7 @@ export const FDS_MORNING_ALAMEDA={
     a_destacado2,
     sedes,
     te_chai,
-    camisetas,       
+    camisetas       
 };
 
 export const FDS_TARDE_ALAMEDA={
@@ -43,7 +43,7 @@ export const FDS_TARDE_ALAMEDA={
     a_malteadas,
     sedes,
     te_chai,
-    camisetas,
+    camisetas
 };
 
 export const MORNING_ALAMEDA={
@@ -52,7 +52,7 @@ export const MORNING_ALAMEDA={
     a_tortas,
     sedes,
     te_chai,
-    camisetas,   
+    camisetas   
 };
 
 export const TARDE_ALAMEDA={
@@ -63,7 +63,7 @@ export const TARDE_ALAMEDA={
     a_malteadas,
     sedes,
     te_chai,
-    camisetas,
+    camisetas
 };
 
 /* :::::::::::::: SAN ANTONIO :::::::::::: */
@@ -72,7 +72,7 @@ export const MORNING_SAN_ANTONIO ={
     focaccia_sandwiches,
     sedes,
     te_chai,
-    camisetas,
+    camisetas
 }
 
 export const TARDE_SAN_ANTONIO ={
@@ -80,7 +80,7 @@ export const TARDE_SAN_ANTONIO ={
     postres,
     sedes,
     te_chai,
-    camisetas,
+    camisetas
 }
 
 export const NOCHE_SAN_ANTONIO ={
@@ -88,5 +88,5 @@ export const NOCHE_SAN_ANTONIO ={
     cocteles,
     sedes,
     te_chai,
-    camisetas,
+    camisetas
 }
