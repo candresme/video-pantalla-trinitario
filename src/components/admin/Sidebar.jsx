@@ -16,19 +16,43 @@ const Sidebar = () => {
                 <hr/>
                 <ul className="nav nav-pills flex-column mb-auto text-start">
                     <li className="nav-item">
-                    <a href="#/admin/products/" className={`nav-link ${isProductsActive ? "active" : ""}`}>
-                        Productos
-                    </a>
+                        <a href="#/admin/products/" className={`nav-link ${isProductsActive ? "active" : ""}`}>
+                            Productos
+                        </a>
+                        <div className="dropdown">
+                            <a className="nav-link dropdown-toggle" href="./" role="button" id="productsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                Opciones
+                            </a>
+                            <ul className="dropdown-menu" aria-labelledby="productsDropdown">
+                                <li><a className="dropdown-item" href="#/admin/products/create">Crear</a></li>
+                                <li><a className="dropdown-item" href="#/admin/products/search">Consultar</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li>
-                    <a href="#/admin/categories/" className={`nav-link ${isCategoriesActive ? 'active' : ''}`}>
-                        Categorías
-                    </a>
+                        <div className="dropdown">
+                            <a className={`nav-link dropdown-toggle" ${isCategoriesActive ? 'active' : ''}`} href="./" role="button" id="categoriesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                Categorías
+                            </a>
+                            <ul className="dropdown-menu" aria-labelledby="categoriesDropdown">
+                                <li><a className="dropdown-item" href="#/admin/categories/create">Crear</a></li>
+                                <li><a className="dropdown-item" href="#/admin/categories/search">Consultar</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li>
-                    <a href="#/admin/locations/" className={`nav-link ${isLocationsActive ? "active" : ""}`}>
-                        Sedes
-                    </a>
+                        <a href="#/admin/locations/" className={`nav-link ${isLocationsActive ? "active" : ""}`}>
+                            Sedes
+                        </a>
+                        <div className="dropdown">
+                            <a className="nav-link dropdown-toggle" href="./" role="button" id="locationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                Opciones
+                            </a>
+                            <ul className="dropdown-menu" aria-labelledby="locationsDropdown">
+                                <li><a className="dropdown-item" href="#/admin/locations/create">Crear</a></li>
+                                <li><a className="dropdown-item" href="#/admin/locations/search">Consultar</a></li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
                 <hr/>

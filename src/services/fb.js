@@ -8,19 +8,17 @@ import { getAuth } from "firebase/auth";
 // Your web app's Firebase configuration
 const firebaseConfig = {
 
-  apiKey: "AIzaSyBMwbuYHMx-17Lt5Igettc7EM4E47kCyUQ",
+  apiKey: "AIzaSyC5BGQ5jwcKPYcDi-W9KrZ5uCqartoVVeA",
 
-  authDomain: "trinitario-coffee.firebaseapp.com",
+  authDomain: "trinitario-cafe.firebaseapp.com",
 
-  projectId: "trinitario-coffee",
+  projectId: "trinitario-cafe",
 
-  storageBucket: "trinitario-coffee.appspot.com",
+  storageBucket: "trinitario-cafe.appspot.com",
 
-  messagingSenderId: "925860662535",
+  messagingSenderId: "371363205422",
 
-  appId: "1:925860662535:web:1f665279e70bfc5abdc9a2",
-
-  measurementId: "G-JHYWS1057S"
+  appId: "1:371363205422:web:b51a70ea93e16cb15e6abf"
 
 };
 
