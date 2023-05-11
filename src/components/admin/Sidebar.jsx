@@ -6,22 +6,22 @@ const Sidebar = () => {
     const isProductsActive = location.pathname.includes('/products');
     const isCategoriesActive = location.pathname.includes('/categories');
     const isLocationsActive = location.pathname.includes('/locations');
+    const isVideosActive = location.pathname.includes('/videos/');
+    const isPlaylistActive = location.pathname.includes('/playlist/');
 
     return (
         <div>
             <div className="d-flex flex-column p-3 bg-light m-0" style={{height: "100vh"}}>
-                <a href="#/admin/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-                    <span className="fs-4">Mi Negocio</span>
+                <a href="#/admin/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
+                    <span className="fs-4">Trinitario Coffee</span>
                 </a>
                 <hr/>
                 <ul className="nav nav-pills flex-column mb-auto text-start">
                     <li className="nav-item">
-                        <a href="#/admin/products/" className={`nav-link ${isProductsActive ? "active" : ""}`}>
-                            Productos
-                        </a>
+                        
                         <div className="dropdown">
-                            <a className="nav-link dropdown-toggle" href="./" role="button" id="productsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                Opciones
+                            <a href="#/admin/products/search" className={`link-offset-2 ${isProductsActive && "active"} nav-link dropdown-toggle`}  role="button" id="productsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                Productos
                             </a>
                             <ul className="dropdown-menu" aria-labelledby="productsDropdown">
                                 <li><a className="dropdown-item" href="#/admin/products/create">Crear</a></li>
@@ -31,8 +31,8 @@ const Sidebar = () => {
                     </li>
                     <li>
                         <div className="dropdown">
-                            <a className={`nav-link dropdown-toggle" ${isCategoriesActive ? 'active' : ''}`} href="./" role="button" id="categoriesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                Categorías
+                            <a className={`nav-link link-offset-2 dropdown-toggle ${isCategoriesActive && "active"}`} href="./" role="button" id="categoriesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                Categorías de productos
                             </a>
                             <ul className="dropdown-menu" aria-labelledby="categoriesDropdown">
                                 <li><a className="dropdown-item" href="#/admin/categories/create">Crear</a></li>
@@ -41,23 +41,46 @@ const Sidebar = () => {
                         </div>
                     </li>
                     <li>
-                        <a href="#/admin/locations/" className={`nav-link ${isLocationsActive ? "active" : ""}`}>
-                            Sedes
-                        </a>
+                        
                         <div className="dropdown">
-                            <a className="nav-link dropdown-toggle" href="./" role="button" id="locationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                Opciones
+                            <a href="#/admin/locations/" className={`nav-link link-offset-2 dropdown-toggle ${isLocationsActive && "active"}`} role="button" id="locationsDropdown" data-bs-toggle="dropdown" aria-expanded="false" >
+                                Sedes
                             </a>
+
                             <ul className="dropdown-menu" aria-labelledby="locationsDropdown">
                                 <li><a className="dropdown-item" href="#/admin/locations/create">Crear</a></li>
                                 <li><a className="dropdown-item" href="#/admin/locations/search">Consultar</a></li>
                             </ul>
                         </div>
                     </li>
+                    <li>                        
+                        <div className="dropdown">
+                            <a href="#/admin/videos/" className={`nav-link link-offset-2 dropdown-toggle ${isVideosActive && "active"}`}role="button" id="videosDropdown" data-bs-toggle="dropdown" aria-expanded="false" >
+                                Videos
+                            </a>
+
+                            <ul className="dropdown-menu" aria-labelledby="videosDropdown">
+                                <li><a className="dropdown-item" href="#/admin/videos/create">Crear</a></li>
+                                <li><a className="dropdown-item" href="#/admin/videos/search">Consultar</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>                        
+                        <div className="dropdown">
+                            <a href="#/admin/playlist/" className={`link-offset-2 dropdown-toggle nav-link ${isPlaylistActive && "active"}`}role="button" id="playlistDropdown" data-bs-toggle="dropdown" aria-expanded="false" >
+                                Playlist pantallas
+                            </a>
+
+                            <ul className="dropdown-menu" aria-labelledby="playlistDropdown">
+                                <li><a className="dropdown-item" href="#/admin/playlist/create">Crear</a></li>
+                                <li><a className="dropdown-item" href="#/admin/playlist/search">Consultar</a></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
                 <hr/>
                 <div className="dropdown">
-                    <a href="./" className="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a href="./" className="d-flex align-items-center text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" className="rounded-circle me-2"/>
                     <strong>Usuario</strong>
                     </a>

@@ -3,16 +3,32 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { HashRouter } from "react-router-dom";
+
 
 //Contexts imports
 import UserContextProvider from './contexts/AuthContext';
+import SedesContextProvider from './contexts/SedesContext';
+import VideosContextProvider from './contexts/VideosContext';
+import PlaylistContextProvider from './contexts/PlaylistContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <HashRouter>
+
     <UserContextProvider>
-    <App />
+    <SedesContextProvider>
+    <VideosContextProvider>
+    <PlaylistContextProvider>
+
+      <App />
+    </PlaylistContextProvider>
+    </VideosContextProvider>
+    </SedesContextProvider>
     </UserContextProvider>
+
+    </HashRouter>
   </React.StrictMode>
 );
 

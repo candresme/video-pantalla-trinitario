@@ -10,17 +10,17 @@ export default function UserContextProvider({ children }) {
   useEffect(() => {
     const auth = getAuth(app);
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(user));
+      sessionStorage.setItem(USER_STORAGE_KEY, JSON.stringify(user));
     });
     return () => unsubscribe();
   }, []);
 
-  const storedUser = JSON.parse(localStorage.getItem(USER_STORAGE_KEY));
+  const storedUser = JSON.parse(sessionStorage.getItem(USER_STORAGE_KEY));
   const [user, setUser] = useState(storedUser);
 
   useEffect(() => {
     if (user !== storedUser) {
-      localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(user));
+      sessionStorage.setItem(USER_STORAGE_KEY, JSON.stringify(user));
     }
   }, [user]);
 
