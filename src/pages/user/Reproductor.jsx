@@ -15,11 +15,13 @@ const Reproductor = () => {
   const getVideoUrls = () => {
     const videoIds = Object.keys(playlistFilter.videos);
     const urls = videoIds.map(videoId => {
-      const url = videos.find(video => video.id === videoId)?.url;
-      console.log(ReactPlayer.canPlay(url));
-      return url;
-    }).filter(url => url);
-    return urls.join(',');
+      const video = videos.find(video => video.id === videoId);
+      return {
+        src: video.url,
+        playsInline: true,
+      };
+    })
+    return urls;
   }
 
   useEffect(() => {
