@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactPlayer from 'react-player';
 
@@ -12,25 +12,31 @@ const Reproductor = () => {
 
   const playlistFilter = playlist.find(play => play.id === idPlay);
 
-  const videoUrls = Object.keys(playlistFilter.videos)
-    .map(videoId => videos.find(video => video.id === videoId)?.url)
-    .filter(url => url);
+  const getVideoUrls = () => {
+    const videoIds = Object.keys(playlistFilter.videos);
+    const urls = videoIds.map(videoId => {
+      const url = videos.find(video => video.id === videoId)?.url;
+      console.log(ReactPlayer.canPlay(url));
+      return url;
+    }).filter(url => url);
+    return urls.join(',');
+  }
+
+  useEffect(() => {
+    console.log(getVideoUrls());
+  });
 
   return (
     <>
       {playlistFilter && (
-        <div style={{ position: 'relative', paddingTop: '56.25%' }}>
-          <ReactPlayer
-            url={videoUrls}
-            playing
-            controls
-            width="100%"
-            height="100%"
-            fullscreen={true}
-            loop
-            style={{ position: 'absolute', top: 0, left: 0 }}
-          />
-        </div>
+        <ReactPlayer
+          url={getVideoUrls()}
+          controls
+          playing
+          loop
+          width="100%"
+          height="100%"
+        />
       )}
     </>
   );
