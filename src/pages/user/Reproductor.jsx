@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactPlayer from 'react-player';
 
@@ -12,27 +12,19 @@ const Reproductor = () => {
 
   const playlistFilter = playlist.find(play => play.id === idPlay);
 
-  const getVideoUrls = () => {
-    const videoIds = Object.keys(playlistFilter.videos);
-    const urls = videoIds.map(videoId => {
-      const video = videos.find(video => video.id === videoId);
-      return {
-        src: video.url,
-        playsInline: true,
-      };
-    })
-    return urls;
-  }
-
-  useEffect(() => {
-    console.log(getVideoUrls());
+  const videoIds = Object.keys(playlistFilter.videos);
+  const videoUrls = videoIds.map(videoId => {
+    const video = videos.find(video => video.id === videoId);
+    return video.url;
   });
+
+  const videoListUrl = videoUrls.join(',');
 
   return (
     <>
       {playlistFilter && (
         <ReactPlayer
-          url={getVideoUrls()}
+          url={videoListUrl}
           controls
           playing
           loop
