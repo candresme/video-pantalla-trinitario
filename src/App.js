@@ -43,7 +43,7 @@ function App() {
   return (
     <div className="App">   
         <Routes>
-          <Route path='/' exact element={<Index />} />
+          <Route path='/' exact element={<Screen />} />
           <Route path='/login/' exact element={<Login />} />  
           <Route path='/screen/' exact element={<Screen />} />  
           <Route path='/select-play/:idSede' exact element={<ScreenSelectPlaylist />} />
