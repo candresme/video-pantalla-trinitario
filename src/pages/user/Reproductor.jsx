@@ -1,38 +1,56 @@
-import React, { useContext } from 'react';
+import React, { useState, useEffect, useRef, useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import ReactPlayer from 'react-player';
+import screenfull from 'screenfull';
 
-import { PlaylistContext } from '../../contexts/PlaylistContext';
 import { VideosContext } from '../../contexts/VideosContext';
+import { PlaylistContext } from '../../contexts/PlaylistContext';
 
 const Reproductor = () => {
   const { idPlay } = useParams();
-  const { playlist } = useContext(PlaylistContext);
   const { videos } = useContext(VideosContext);
+  const { playlist } = useContext(PlaylistContext);
 
   const playlistFilter = playlist.find(play => play.id === idPlay);
 
-  const videoIds = Object.keys(playlistFilter.videos);
-  const videoUrls = videoIds.map(videoId => {
-    const video = videos.find(video => video.id === videoId);
-    return video.url;
-  });
+  const playlistVideos = Object.keys(playlistFilter.videos).map(videoId => videos.find(video => video.id === videoId));
 
-  const videoListUrl = videoUrls.join(',');
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const videoRef = useRef(null);
+
+  const handleVideoEnd = () => {
+    if (currentVideoIndex < playlistVideos.length - 1) {
+      setCurrentVideoIndex(currentVideoIndex + 1);
+    } else {
+      setCurrentVideoIndex(0);
+    }
+  };
+
+  useEffect(() => {
+    const videoPlayer = videoRef.current;
+
+    // Set the first video source
+    videoPlayer.src = playlistVideos[currentVideoIndex].url;
+
+    // Add the event listener for the 'ended' event
+    videoPlayer.addEventListener('ended', handleVideoEnd);
+
+    // Clean up the event listener on unmount
+    return () => {
+      videoPlayer.removeEventListener('ended', handleVideoEnd);
+    };
+  }, [currentVideoIndex, playlistVideos]);
+
+  useEffect(() => {
+    const videoPlayer = videoRef.current;
+
+    // Enter fullscreen mode on load
+    if (screenfull.isEnabled) {
+      screenfull.request(videoPlayer);
+    }
+  }, []);
 
   return (
-    <>
-      {playlistFilter && (
-        <ReactPlayer
-          url={videoListUrl}
-          controls
-          playing
-          loop
-          width="100%"
-          height="100%"
-        />
-      )}
-    </>
+    <video ref={videoRef} className="video-js vjs-big-play-centered" autoPlay playsInline/>
   );
 };
 
